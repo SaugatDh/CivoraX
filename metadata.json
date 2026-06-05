@@ -1,0 +1,6 @@
+{
+  "name": "CivoraX",
+  "description": "CivoraX is a high-performance software studio in Dharan, Nepal, building reliable offline-first POS systems, ERPs, and custom enterprise tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

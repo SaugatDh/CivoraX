@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #f4f7f3;
+  --color-surface-2: #e9efe8;
+  --color-surface-3: #e4ebe3;
+  --color-surface-white: #ffffff;
+  --color-foreground: #1a2118;
+  --color-foreground-secondary: #455547;
+  --color-foreground-muted: #748878;
+  --color-accent: #6b8f71;
+  --color-accent-hover: #5a7d5f;
+  --color-accent-2: #5f8a65;
+  --color-accent-2-hover: #4d7352;
+  --color-border: #d0ddd2;
+  --color-border-2: #c2d3c4;
+  --color-border-3: #b5c8b8;
+
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+  --font-serif: var(--font-serif), Georgia, serif;
+}
+
+:root {
+  --shadow-sm: 0 4px 24px rgba(26, 33, 24, 0.06);
+  --shadow-lg: 0 20px 60px rgba(26, 33, 24, 0.12);
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+.border-line {
+  border-color: var(--color-border);
+}
+
+.bg-surface-2 {
+  background-color: var(--color-surface-2);
+}
+
+.card-shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.card-shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface-2);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-foreground-muted);
+}
