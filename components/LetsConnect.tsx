@@ -36,10 +36,10 @@ export default function LetsConnect() {
             Reach Out Now!
           </span>
           <a
-            href="tel:+9779765432100"
+            href="tel:+9779800000000"
             className="text-2xl md:text-3xl font-extrabold text-[#4a6b5d] tracking-tight hover:opacity-80 transition-opacity"
           >
-            +977-976-5432100
+            +977-980-0000000
           </a>
           <button
             type="button"

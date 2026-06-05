@@ -20,7 +20,7 @@ const branches = [
     province: 'Koshi Province',
     type: 'Headquarters',
     email: 'info@civorax.com',
-    phone: '+977-976-5432100',
+    phone: '+977-980-0000000',
     hours: 'Sun-Fri · 9AM-6PM',
   },
   {
@@ -29,7 +29,7 @@ const branches = [
     province: 'Bagmati Province',
     type: 'Regional Office',
     email: 'kathmandu@civorax.com',
-    phone: '+977-980-1234567',
+    phone: '+977-980-0000000',
     hours: 'Sun-Fri · 9AM-6PM',
   },
   {
@@ -38,7 +38,7 @@ const branches = [
     province: 'Gandaki Province',
     type: 'Field Office',
     email: 'pokhara@civorax.com',
-    phone: '+977-984-7654321',
+    phone: '+977-980-0000000',
     hours: 'Sun-Fri · 10AM-5PM',
   },
 ];
@@ -276,7 +276,7 @@ export default function ContactPage() {
             </a>
 
             <a
-              href="https://wa.me/9779765432100"
+              href="https://wa.me/9779800000000"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-surface border border-border p-6 rounded-2xl hover:border-accent/40 hover:shadow-md transition-all flex flex-col"
