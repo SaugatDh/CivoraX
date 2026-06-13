@@ -12,7 +12,7 @@ export default function Values() {
               <span className="w-1.5 h-1.5 rounded-full bg-accent" />
               Our Code of Ethics
             </div>
-            <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-foreground font-display">
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tighter text-foreground font-display">
               Software is human work. We keep it honest.
             </h2>
             <p className="text-sm text-foreground-secondary leading-relaxed mt-4">

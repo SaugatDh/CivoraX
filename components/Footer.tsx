@@ -36,8 +36,7 @@ export default function Footer() {
           <span className="text-[10px] font-mono text-foreground-muted uppercase font-bold block mb-4">STUDIO BLUEPRINT</span>
           <ul className="text-xs space-y-2.5 font-mono text-foreground-secondary">
             <li><Link href="/products" className="hover:text-accent-2 transition">Client Demo Room</Link></li>
-            <li><Link href="/pricing" className="hover:text-accent-2 transition">Price Cost Matrix</Link></li>
-            <li><Link href="/about/introduction" className="hover:text-accent-2 transition">Company values</Link></li>
+            <li><Link href="/about" className="hover:text-accent-2 transition">Company values</Link></li>
             <li><Link href="/contact" className="hover:text-accent-2 transition">Contact helpdesk</Link></li>
           </ul>
         </div>

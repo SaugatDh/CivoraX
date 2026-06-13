@@ -53,7 +53,7 @@ export default function ContactModal() {
           <div>
             <h3
               id="contact-modal-title"
-              className="text-xl font-extrabold text-[#1a2420] leading-tight"
+              className="text-xl font-extrabold text-foreground leading-tight"
             >
               Get in touch
             </h3>
@@ -65,7 +65,7 @@ export default function ContactModal() {
             type="button"
             onClick={() => setIsOpen(false)}
             aria-label="Close contact form"
-            className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-[#1a2420] hover:bg-slate-100 transition-colors shrink-0 ml-2"
+            className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-foreground hover:bg-slate-100 transition-colors shrink-0 ml-2"
           >
             <X className="w-4 h-4" />
           </button>
@@ -87,7 +87,7 @@ export default function ContactModal() {
               type="text"
               required
               placeholder="Ramesh Karki"
-              className="w-full mt-1 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-[#4a6b5d]"
+              className="w-full mt-1 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-accent"
             />
           </div>
 
@@ -100,7 +100,7 @@ export default function ContactModal() {
               type="email"
               required
               placeholder="you@company.com"
-              className="w-full mt-1 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-[#4a6b5d]"
+              className="w-full mt-1 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-accent"
             />
           </div>
 
@@ -113,7 +113,7 @@ export default function ContactModal() {
               type="tel"
               required
               placeholder="+977-98XXXXXXXX"
-              className="w-full mt-1 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-[#4a6b5d]"
+              className="w-full mt-1 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-accent"
             />
           </div>
 
@@ -126,13 +126,13 @@ export default function ContactModal() {
               rows={4}
               required
               placeholder="Briefly describe your project scope, timeline, and key requirements…"
-              className="w-full mt-1 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-[#4a6b5d] resize-none"
+              className="w-full mt-1 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-accent resize-none"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full mt-4 py-2.5 bg-[#1a2420] text-white font-semibold text-sm rounded-lg hover:bg-[#4a6b5d] transition-colors"
+              className="w-full mt-4 py-2.5 bg-dark text-white font-semibold text-sm rounded-lg hover:bg-accent transition-colors"
           >
             Submit Inquiry
           </button>

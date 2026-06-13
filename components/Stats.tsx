@@ -10,31 +10,27 @@ export default function Stats() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 lg:px-10" id="landing-stats">
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left">
-        {statsList.map((stat, idx) => (
-          <motion.div 
-            key={idx}
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
-            className="p-6 bg-surface/20 border border-border/50 rounded-2xl flex flex-col justify-between"
-          >
-            <div>
-              <div className="text-4xl md:text-5xl font-mono font-bold text-accent tracking-tight">
-                {stat.value}
-              </div>
-              <div className="text-sm font-semibold text-foreground uppercase tracking-wider font-sans mt-3">
-                {stat.label}
-              </div>
-            </div>
-            <p className="text-foreground-secondary text-xs leading-normal mt-2 font-mono">
-              {stat.detail}
-            </p>
-          </motion.div>
-        ))}
-      </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-8 text-center">
+      {statsList.map((stat, idx) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: idx * 0.1 }}
+          className="border-t border-border pt-6"
+        >
+          <div className="text-5xl font-mono font-extrabold text-accent">
+            {stat.value}
+          </div>
+          <div className="font-mono uppercase tracking-widest text-xs text-foreground-muted mt-1">
+            {stat.label}
+          </div>
+          <p className="text-sm text-foreground-secondary mt-3 leading-relaxed max-w-[200px] mx-auto">
+            {stat.detail}
+          </p>
+        </motion.div>
+      ))}
     </div>
   );
 }

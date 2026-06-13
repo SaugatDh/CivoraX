@@ -1,28 +1,18 @@
 import type {Metadata} from 'next';
-import { Inter, Space_Grotesk, JetBrains_Mono, Playfair_Display } from 'next/font/google';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ContactModal from '@/components/ContactModal';
-import './globals.css'; // Global styles
+import ScrollToTop from '@/components/ScrollToTop';
+import './globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
 });
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-display',
-});
-
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-mono',
-});
-
-const playfairDisplay = Playfair_Display({
-  subsets: ['latin'],
-  style: ['normal', 'italic'],
-  variable: '--font-serif',
 });
 
 export const metadata: Metadata = {
@@ -32,11 +22,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${playfairDisplay.variable} scroll-smooth`}>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} scroll-smooth`}>
       <body suppressHydrationWarning className="antialiased min-h-screen selection:bg-accent selection:text-white">
         {children}
         <WhatsAppButton />
         <ContactModal />
+        <ScrollToTop />
       </body>
     </html>
   );

@@ -171,7 +171,7 @@ export default function ContactPage() {
                   06 / Contact Studio
                 </span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-medium tracking-tight text-foreground mb-6 font-display leading-[1.05]">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tighter text-foreground mb-6 font-display leading-[1.05]">
                 Initiate your custom system{' '}
                 <span className="text-accent italic">scoping guide.</span>
               </h1>
@@ -198,7 +198,7 @@ export default function ContactPage() {
 
             {/* Right SLA panel */}
             <div className="lg:col-span-5">
-              <div className="bg-[#0f1714] text-surface rounded-2xl p-8 border border-[#1a2420]">
+              <div className="bg-dark text-surface rounded-2xl p-8 border border-dark-border">
                 <div className="flex items-center gap-2 mb-6">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
                   <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
@@ -248,7 +248,7 @@ export default function ContactPage() {
             <span className="text-sm font-mono font-bold text-accent uppercase tracking-widest block mb-3">
               Direct Channels
             </span>
-            <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-foreground font-display leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter text-foreground font-display leading-[1.1]">
               Prefer to reach us directly?
             </h2>
             <p className="text-base text-foreground-secondary mt-5 leading-relaxed max-w-2xl">
@@ -285,7 +285,7 @@ export default function ContactPage() {
                 <MessageCircle className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-foreground mb-2">WhatsApp</h3>
-              <p className="text-sm text-foreground-secondary font-mono">+977-976-5432100</p>
+              <p className="text-sm text-foreground-secondary font-mono">+977-980-0000000</p>
               <p className="text-xs text-foreground-muted mt-3 flex-1">
                 Quickest route. Our lead architects respond to operational emergencies and live build questions.
               </p>
@@ -296,14 +296,14 @@ export default function ContactPage() {
             </a>
 
             <a
-              href="tel:+9779765432100"
+              href="tel:+9779800000000"
               className="group bg-surface border border-border p-6 rounded-2xl hover:border-accent/40 hover:shadow-md transition-all flex flex-col"
             >
               <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-5">
                 <Phone className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-foreground mb-2">Phone</h3>
-              <p className="text-sm text-foreground-secondary font-mono">+977-976-5432100</p>
+              <p className="text-sm text-foreground-secondary font-mono">+977-980-0000000</p>
               <p className="text-xs text-foreground-muted mt-3 flex-1">
                 Direct line to the Dharan studio. Best for voice conversations and scheduled deep-dive sessions.
               </p>
@@ -338,7 +338,7 @@ export default function ContactPage() {
             <span className="text-sm font-mono font-bold text-accent uppercase tracking-widest block mb-3">
               Engagement Timeline
             </span>
-            <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-foreground font-display leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter text-foreground font-display leading-[1.1]">
               What happens after you file an inquiry.
             </h2>
             <p className="text-base text-foreground-secondary mt-5 leading-relaxed max-w-2xl">
@@ -356,7 +356,7 @@ export default function ContactPage() {
                 >
                   <div className="flex items-center justify-between mb-5">
                     <div className="w-12 h-12 rounded-xl bg-[#f4f7f5] border border-border flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-[#4a6b5d]" />
+                        <Icon className="w-6 h-6 text-accent" />
                     </div>
                     <span className="text-2xl font-mono font-black text-accent/30">
                       {step.step}
@@ -393,7 +393,7 @@ export default function ContactPage() {
                 <span className="text-sm font-mono font-bold text-accent uppercase tracking-widest block mb-3">
                   Office Locations
                 </span>
-                <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-foreground font-display leading-[1.1]">
+                <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter text-foreground font-display leading-[1.1]">
                   Visit our studios.
                 </h2>
                 <p className="text-base text-foreground-secondary mt-5 leading-relaxed">
@@ -457,7 +457,7 @@ export default function ContactPage() {
             <span className="text-sm font-mono font-bold text-accent uppercase tracking-widest block mb-3">
               Common Questions
             </span>
-            <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-foreground font-display leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter text-foreground font-display leading-[1.1]">
               Frequently asked.
             </h2>
             <p className="text-base text-foreground-secondary mt-5 leading-relaxed max-w-2xl">

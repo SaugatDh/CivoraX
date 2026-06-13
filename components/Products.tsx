@@ -39,7 +39,7 @@ export default function Products() {
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             Enterprise Solutions
           </div>
-          <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-foreground font-display">
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tighter text-foreground font-display">
             Built to manage high-volume, multi-branch complexity.
           </h2>
         </div>
@@ -52,7 +52,7 @@ export default function Products() {
               <span className="bg-accent/10 text-accent font-mono text-xs px-2.5 py-1 rounded-md font-bold uppercase mb-4 inline-block">
                 Proprietary POS Engine
               </span>
-              <h3 className="text-2xl font-semibold mb-3 text-foreground font-display">CivoraX Retail POS Client</h3>
+              <h3 className="text-2xl font-bold mb-3 text-foreground font-display">CivoraX Retail POS Client</h3>
               <p className="text-sm text-foreground-secondary leading-relaxed mb-6">
                 Perfectly suited for local supermarkets, hardware warehouses, and restaurant groups. Links physical receipt printers, payment drawers, and barcode scanners directly via browser USB endpoints without native binary wrappers.
               </p>
@@ -116,7 +116,7 @@ export default function Products() {
               <span className="bg-accent/10 text-accent font-mono text-xs px-2.5 py-1 rounded-md font-bold uppercase mb-4 inline-block">
                 Regional ERP Framework
               </span>
-              <h3 className="text-2xl font-semibold mb-3 text-foreground font-display">CivoraX Core ERP Console</h3>
+              <h3 className="text-2xl font-bold mb-3 text-foreground font-display">CivoraX Core ERP Console</h3>
               <p className="text-sm text-foreground-secondary leading-relaxed mb-6">
                 Aggregate raw material ledgers and branches under a single pane of glass. Optimize stock movements, track distribution channels, and access real-time metrics across your branches.
               </p>
@@ -183,12 +183,13 @@ export default function Products() {
             </div>
 
             <div>
-              <a 
-                href="#contact" 
-                className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-hover font-mono uppercase tracking-wider"
+              <button
+                type="button"
+                onClick={openContactModal}
+                className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-hover font-mono uppercase tracking-wider cursor-pointer"
               >
-                Request multi-branch blueprint →
-              </a>
+                Get in touch →
+              </button>
             </div>
           </div>
 

@@ -12,7 +12,7 @@ export default function Services() {
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             Core Capabilities
           </div>
-          <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-foreground font-display">
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tighter text-foreground font-display">
             We specialize in custom systems built for business longevity.
           </h2>
           <p className="text-foreground-secondary text-md mt-4 leading-relaxed">
@@ -28,7 +28,7 @@ export default function Services() {
               <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-6">
                 <Smartphone className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Custom Web App Ecosystems</h3>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Custom Web App Ecosystems</h3>
               <p className="text-sm text-foreground-secondary leading-relaxed">
                 Bespoke SaaS engines, member portal systems, and collaborative web platforms optimized for cellular coverage, fast caching, and modern desktop experiences.
               </p>
@@ -49,7 +49,7 @@ export default function Services() {
               <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-6">
                 <Layers className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Core Corporate ERP Engines</h3>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Core Corporate ERP Engines</h3>
               <p className="text-sm text-foreground-secondary leading-relaxed">
                 An all-in-one central command console linking sales journals, procurement structures, stock distribution chains, staff shifts, and double-entry book balancing.
               </p>
@@ -70,7 +70,7 @@ export default function Services() {
               <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-6">
                 <Receipt className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Offline-First VAT Retail POS</h3>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Offline-First VAT Retail POS</h3>
               <p className="text-sm text-foreground-secondary leading-relaxed">
                 POS terminals built to keep checkout clerks running smoothly during power grid disruptions or internet blackouts. Automatically registers transactions and streams statistics to cloud accounts.
               </p>

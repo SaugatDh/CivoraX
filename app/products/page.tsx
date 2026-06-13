@@ -11,9 +11,7 @@ import Toast from '@/components/Toast';
 import { CartItem, InventoryItem } from '@/components/types';
 import { motion } from 'motion/react';
 import {
-  ShoppingCart, RefreshCw, Cpu, Wifi, Server, Printer,
-  HardDrive, BarChart3, Shield, Cable, Cloud, Terminal,
-  ArrowRight, Boxes, ScanLine, ArrowLeftRight,
+  ShoppingCart, RefreshCw,
 } from 'lucide-react';
 
 export default function ProductsPage() {
@@ -76,7 +74,7 @@ export default function ProductsPage() {
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-ping" />
               Runtime UI Suite
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-medium tracking-tight text-foreground mb-6 font-display leading-[1.05]">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tighter text-foreground mb-6 font-display leading-[1.05]">
               Production-Grade{' '}
               <span className="text-accent italic">Retail and Enterprise Software.</span>
             </h1>
@@ -192,7 +190,7 @@ export default function ProductsPage() {
               </div>
 
               {/* Activity feed */}
-              <div className="p-6 bg-[#0f1714]">
+              <div className="p-6 bg-dark">
                 <div className="flex items-center gap-2 mb-5">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   <h3 className="text-sm font-mono font-bold text-emerald-300 uppercase tracking-widest">
@@ -259,224 +257,6 @@ export default function ProductsPage() {
 
       {/* Static Products Spec Matrices Section */}
       <Products />
-
-      {/* Section 4: Deployment & Hardware Ecosystem — 90vh */}
-      <section className="min-h-[90vh] flex items-center py-24 bg-surface border-b border-border w-full" id="deployment-ecosystem">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full">
-          <div className="max-w-3xl mb-16">
-            <span className="text-sm font-mono font-bold text-accent uppercase tracking-widest block mb-3">
-              Deployment &amp; Hardware Ecosystem
-            </span>
-            <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-foreground font-display leading-[1.1]">
-              Direct hardware integration. Zero native wrappers.
-            </h2>
-            <p className="text-base text-foreground-secondary mt-5 leading-relaxed max-w-2xl">
-              Our systems talk to receipt printers, barcode scanners, and cash drawers directly through browser-native protocols. No Electron shells, no proprietary drivers, no vendor lock-in at the hardware layer.
-            </p>
-          </div>
-
-          {/* Hardware Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <div className="bg-surface-white border border-border p-6 rounded-2xl">
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-5">
-                <Printer className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground leading-snug">
-                Thermal Receipt Printers
-              </h3>
-              <p className="text-sm text-foreground-secondary leading-relaxed mt-3">
-                ESC/POS command set over USB, serial, or network. Epson, Star, Citizen, and generic 58mm/80mm models work out of the box. Renders logos, QR codes, and IRD-mandated fiscal blocks.
-              </p>
-              <p className="text-xs font-mono text-accent uppercase tracking-widest mt-4">
-                Protocol · ESC/POS
-              </p>
-            </div>
-
-            <div className="bg-surface-white border border-border p-6 rounded-2xl">
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-5">
-                <ScanLine className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground leading-snug">
-                Barcode Scanners
-              </h3>
-              <p className="text-sm text-foreground-secondary leading-relaxed mt-3">
-                USB HID keyboard-emulation scanners and Bluetooth serial scanners both supported via WebUSB and Web Bluetooth APIs. EAN, UPC, Code-128, and QR payloads parsed client-side.
-              </p>
-              <p className="text-xs font-mono text-accent uppercase tracking-widest mt-4">
-                Protocol · WebUSB / BT
-              </p>
-            </div>
-
-            <div className="bg-surface-white border border-border p-6 rounded-2xl">
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-5">
-                <Boxes className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground leading-snug">
-                Cash Drawer Pulses
-              </h3>
-              <p className="text-sm text-foreground-secondary leading-relaxed mt-3">
-                RJ-11 cash drawer kick via connected printer or direct RJ-12 relay module. Automatic open on cash payment, manual override, and shift reconciliation tracking.
-              </p>
-              <p className="text-xs font-mono text-accent uppercase tracking-widest mt-4">
-                Protocol · RJ-11 / RJ-12
-              </p>
-            </div>
-
-            <div className="bg-surface-white border border-border p-6 rounded-2xl">
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-5">
-                <HardDrive className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground leading-snug">
-                Local Store Servers
-              </h3>
-              <p className="text-sm text-foreground-secondary leading-relaxed mt-3">
-                Compact NUC-class or Raspberry Pi 5 deployments run the full stack locally. Internet is optional, not required. Central office pulls deltas when the link is up.
-              </p>
-              <p className="text-xs font-mono text-accent uppercase tracking-widest mt-4">
-                Hardware · x86 / ARM
-              </p>
-            </div>
-          </div>
-
-          {/* Deployment Modes row */}
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-[#f4f7f5] border border-border p-6 rounded-2xl">
-              <div className="flex items-center gap-2 mb-3">
-                <Cloud className="w-4 h-4 text-accent" />
-                <h4 className="text-sm font-mono font-bold uppercase tracking-widest text-foreground">
-                  Cloud-Hosted
-                </h4>
-              </div>
-              <p className="text-sm text-foreground-secondary leading-relaxed">
-                Managed on your private cloud instance (AWS, DigitalOcean, Hetzner). CivoraX provisions the container, manages TLS, and configures nightly backups. You retain full root access.
-              </p>
-            </div>
-            <div className="bg-[#f4f7f5] border border-border p-6 rounded-2xl">
-              <div className="flex items-center gap-2 mb-3">
-                <Server className="w-4 h-4 text-accent" />
-                <h4 className="text-sm font-mono font-bold uppercase tracking-widest text-foreground">
-                  On-Premise
-                </h4>
-              </div>
-              <p className="text-sm text-foreground-secondary leading-relaxed">
-                Installed on a local server inside your office or branch. Internet is optional. We deliver the Docker stack, train your IT staff, and hand over the runbook.
-              </p>
-            </div>
-            <div className="bg-[#f4f7f5] border border-border p-6 rounded-2xl">
-              <div className="flex items-center gap-2 mb-3">
-                <HardDrive className="w-4 h-4 text-accent" />
-                <h4 className="text-sm font-mono font-bold uppercase tracking-widest text-foreground">
-                  Hybrid Sync
-                </h4>
-              </div>
-              <p className="text-sm text-foreground-secondary leading-relaxed">
-                Local branch servers replicate with a central cloud instance via our Go-based sync engine. Conflict-aware, retry-safe, and partition-tolerant across days of disconnection.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 5: Operational Resilience Matrix — 80vh */}
-      <section className="min-h-[80vh] flex items-center py-24 bg-surface-white border-b border-border w-full" id="resilience-matrix">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full">
-          <div className="max-w-3xl mb-16">
-            <span className="text-sm font-mono font-bold text-accent uppercase tracking-widest block mb-3">
-              Operational Resilience Matrix
-            </span>
-            <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-foreground font-display leading-[1.1]">
-              Engineered for the conditions your branch actually faces.
-            </h2>
-            <p className="text-base text-foreground-secondary mt-5 leading-relaxed max-w-2xl">
-              The matrix below maps real-world failure modes to the architectural patterns we ship. Every row is a constraint we tested against, not a feature we benchmarked.
-            </p>
-          </div>
-
-          <div className="overflow-x-auto border border-border rounded-2xl bg-surface">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="text-left bg-surface-2 border-b border-border">
-                  <th className="px-6 py-4 text-sm font-mono font-bold uppercase tracking-widest text-foreground-muted">
-                    Failure Mode
-                  </th>
-                  <th className="px-6 py-4 text-sm font-mono font-bold uppercase tracking-widest text-foreground-muted">
-                    System Response
-                  </th>
-                  <th className="px-6 py-4 text-sm font-mono font-bold uppercase tracking-widest text-foreground-muted">
-                    Data Outcome
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border">
-                <tr className="hover:bg-surface-white/50 transition-colors">
-                  <td className="px-6 py-5 font-semibold text-foreground">Internet drops mid-shift</td>
-                  <td className="px-6 py-5 text-foreground-secondary">
-                    Sales auto-queue to local IndexedDB / SQLite buffer
-                  </td>
-                  <td className="px-6 py-5 text-emerald-600 font-mono text-xs uppercase tracking-widest">
-                    Zero data loss
-                  </td>
-                </tr>
-                <tr className="hover:bg-surface-white/50 transition-colors">
-                  <td className="px-6 py-5 font-semibold text-foreground">Power outage &lt; 5s</td>
-                  <td className="px-6 py-5 text-foreground-secondary">
-                    UPS-buffered local server; auto-resume on return
-                  </td>
-                  <td className="px-6 py-5 text-emerald-600 font-mono text-xs uppercase tracking-widest">
-                    Continuous operation
-                  </td>
-                </tr>
-                <tr className="hover:bg-surface-white/50 transition-colors">
-                  <td className="px-6 py-5 font-semibold text-foreground">Power outage &gt; 30 min</td>
-                  <td className="px-6 py-5 text-foreground-secondary">
-                    Graceful shutdown; offline resume on boot
-                  </td>
-                  <td className="px-6 py-5 text-emerald-600 font-mono text-xs uppercase tracking-widest">
-                    Auto-recovery
-                  </td>
-                </tr>
-                <tr className="hover:bg-surface-white/50 transition-colors">
-                  <td className="px-6 py-5 font-semibold text-foreground">Branch server offline for 3 days</td>
-                  <td className="px-6 py-5 text-foreground-secondary">
-                    Local DB continues; sync resumes on link return
-                  </td>
-                  <td className="px-6 py-5 text-emerald-600 font-mono text-xs uppercase tracking-widest">
-                    Eventual consistency
-                  </td>
-                </tr>
-                <tr className="hover:bg-surface-white/50 transition-colors">
-                  <td className="px-6 py-5 font-semibold text-foreground">Printer disconnected</td>
-                  <td className="px-6 py-5 text-foreground-secondary">
-                    Receipt queues to local storage; replays on reconnect
-                  </td>
-                  <td className="px-6 py-5 text-emerald-600 font-mono text-xs uppercase tracking-widest">
-                    No reprint drift
-                  </td>
-                </tr>
-                <tr className="hover:bg-surface-white/50 transition-colors">
-                  <td className="px-6 py-5 font-semibold text-foreground">IRD audit request</td>
-                  <td className="px-6 py-5 text-foreground-secondary">
-                    One-click export of VAT-compliant XML / CSV
-                  </td>
-                  <td className="px-6 py-5 text-emerald-600 font-mono text-xs uppercase tracking-widest">
-                    Instant submission
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div className="mt-12 text-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-accent hover:text-accent-hover transition-colors"
-            >
-              Request Resilience Audit
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       <LetsConnect />
 

@@ -1,32 +1,22 @@
 'use client';
 
-import { useState, useEffect, useCallback, useSyncExternalStore, useRef } from 'react';
+import { useState, useEffect, useCallback, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ChevronRight, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { openContactModal } from '@/lib/contactModal';
-
-const aboutChildren = [
-  { label: 'Introduction', href: '/about/introduction' },
-  { label: 'How we work', href: '/about/how-we-work' },
-  { label: 'Our Team', href: '/about/our-team' },
-  { label: 'Our Activities', href: '/about/our-activities' },
-];
 
 const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'Services', href: '/services' },
-  { label: 'About', href: '/about', children: aboutChildren },
+  { label: 'About', href: '/about' },
   { label: 'Products', href: '/products' },
+  { label: 'Career', href: '/career' },
   { label: 'Contact', href: '/contact' },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [expandedItem, setExpandedItem] = useState<string | null>(null);
-  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
-  const aboutDropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
 
   const mounted = useSyncExternalStore(
@@ -37,23 +27,6 @@ export default function Header() {
 
   const closeMenu = useCallback(() => {
     setMobileMenuOpen(false);
-    setExpandedItem(null);
-  }, []);
-
-  const openAboutDropdown = useCallback(() => {
-    if (aboutDropdownTimeout.current) clearTimeout(aboutDropdownTimeout.current);
-    setAboutDropdownOpen(true);
-  }, []);
-
-  const scheduleCloseAboutDropdown = useCallback(() => {
-    if (aboutDropdownTimeout.current) clearTimeout(aboutDropdownTimeout.current);
-    aboutDropdownTimeout.current = setTimeout(() => setAboutDropdownOpen(false), 150);
-  }, []);
-
-  useEffect(() => {
-    return () => {
-      if (aboutDropdownTimeout.current) clearTimeout(aboutDropdownTimeout.current);
-    };
   }, []);
 
   useEffect(() => {
@@ -71,10 +44,6 @@ export default function Header() {
     return () => { document.body.style.overflow = ''; };
   }, [mobileMenuOpen]);
 
-  const toggleAccordion = (label: string) => {
-    setExpandedItem((prev) => (prev === label ? null : label));
-  };
-
   return (
     <header id="header-section" className="sticky top-0 z-40 backdrop-blur-md bg-surface-3/85 border-b border-border transition-all duration-300">
       <div className="max-w-7xl mx-auto px-8 lg:px-10 py-5">
@@ -86,54 +55,7 @@ export default function Header() {
           
           <nav className="flex items-center gap-8 text-sm font-medium text-foreground-secondary" id="desktop-nav">
             {navItems.map((item) => {
-              const isActive = pathname === item.href;
-              const isAboutActive = pathname.startsWith('/about');
-              const hasChildren = !!item.children;
-
-              if (hasChildren) {
-                return (
-                  <div
-                    key={item.href}
-                    className="relative"
-                    onMouseEnter={openAboutDropdown}
-                    onMouseLeave={scheduleCloseAboutDropdown}
-                  >
-                    <button
-                      type="button"
-                      className={`flex items-center gap-1 hover:text-foreground transition relative group py-1 ${isAboutActive ? 'text-foreground font-semibold' : 'text-foreground-secondary'}`}
-                      aria-haspopup="true"
-                      aria-expanded={aboutDropdownOpen}
-                    >
-                      {item.label}
-                      <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${aboutDropdownOpen ? 'rotate-180' : ''}`} />
-                      <span className={`absolute bottom-0 left-0 h-0.5 bg-accent-2 transition-all duration-300 ${isAboutActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
-                    </button>
-
-                    <div
-                      className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-200 ${aboutDropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-1'}`}
-                    >
-                      <div className="w-56 bg-surface-white border border-border rounded-xl shadow-lg overflow-hidden">
-                        {item.children.map((child) => {
-                          const isChildActive = pathname === child.href;
-                          return (
-                            <Link
-                              key={child.href}
-                              href={child.href}
-                              className={`block px-4 py-2.5 text-sm transition-colors ${
-                                isChildActive
-                                  ? 'text-foreground bg-surface-2 font-semibold'
-                                  : 'text-foreground-secondary hover:text-foreground hover:bg-surface-2/60'
-                              }`}
-                            >
-                              {child.label}
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                );
-              }
+              const isActive = pathname === item.href || (item.href === '/about' && pathname.startsWith('/about'));
 
               return (
                 <Link
@@ -210,52 +132,19 @@ export default function Header() {
             {/* Nav items */}
             <nav className="flex-1 overflow-y-auto px-4 py-4" aria-label="Mobile navigation">
               {navItems.map((item) => {
-                const isActive = pathname === item.href;
-                const isExpanded = expandedItem === item.label;
-                const hasChildren = !!item.children;
+                const isActive = pathname === item.href || (item.href === '/about' && pathname.startsWith('/about'));
 
                 return (
                   <div key={item.href} className="mb-1">
-                    {hasChildren ? (
-                      <>
-                        <button
-                          onClick={() => toggleAccordion(item.label)}
-                          className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
-                            isActive ? 'text-foreground bg-surface-2' : 'text-foreground-secondary hover:text-foreground hover:bg-surface-2/60'
-                          }`}
-                        >
-                          {item.label}
-                          <ChevronRight
-                            className={`w-4 h-4 text-foreground-muted transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`}
-                          />
-                        </button>
-
-                        <div className={`overflow-hidden transition-all duration-200 ${isExpanded ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
-                          <div className="pl-4 pr-2 py-1">
-                            {item.children.map((child) => (
-                              <Link
-                                key={child.href}
-                                href={child.href}
-                                onClick={closeMenu}
-                                className="block px-4 py-2.5 rounded-lg text-sm text-foreground-secondary hover:text-foreground hover:bg-surface-2/60 transition-colors"
-                              >
-                                {child.label}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      </>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        onClick={closeMenu}
-                        className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
-                          isActive ? 'text-foreground bg-surface-2' : 'text-foreground-secondary hover:text-foreground hover:bg-surface-2/60'
-                        }`}
-                      >
-                        {item.label}
-                      </Link>
-                    )}
+                    <Link
+                      href={item.href}
+                      onClick={closeMenu}
+                      className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                        isActive ? 'text-foreground bg-surface-2' : 'text-foreground-secondary hover:text-foreground hover:bg-surface-2/60'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
                   </div>
                 );
               })}

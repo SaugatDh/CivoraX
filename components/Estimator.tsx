@@ -42,7 +42,7 @@ export default function Estimator({
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             Smart Budget Calculator
           </div>
-          <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-foreground font-display">
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tighter text-foreground font-display">
             Plan your system roadmap & estimate setup costs.
           </h2>
           <p className="text-foreground-secondary text-sm mt-3 leading-relaxed">

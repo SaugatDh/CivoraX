@@ -47,7 +47,7 @@ export default function Simulator({
               <span className="w-1.5 h-1.5 rounded-full bg-accent" />
               Interactive Demo Room
             </div>
-            <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-foreground font-display">
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tighter text-foreground font-display">
               Test-drive our systems in real-time.
             </h2>
             <p className="text-sm text-foreground-secondary mt-4 leading-relaxed mb-6">

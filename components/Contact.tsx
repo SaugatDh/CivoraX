@@ -57,7 +57,7 @@ export default function Contact({
               <span className="w-1.5 h-1.5 rounded-full bg-accent" />
               Work With Us
             </div>
-            <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-foreground font-display">
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tighter text-foreground font-display">
               Let&apos;s build something beautiful.
             </h2>
             <p className="text-sm text-foreground-secondary mt-4 leading-relaxed mb-8">
@@ -74,7 +74,7 @@ export default function Contact({
 
               <div>
                 <span className="text-[10px] font-mono text-foreground-muted uppercase font-bold block mb-1">HQ WORKSTATION</span>
-                <p className="text-sm text-foreground font-medium leading-relaxed">
+                <p className="text-base text-foreground font-medium leading-relaxed">
                   CivoraX Tech Pvt. Ltd. <br />
                   Putali Line-12, Dharan, <br />
                   Koshi Province, Nepal

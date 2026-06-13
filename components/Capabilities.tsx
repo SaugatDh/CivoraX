@@ -34,7 +34,7 @@ export default function Capabilities() {
         <span className="text-sm font-mono font-bold text-accent uppercase tracking-widest block mb-3">
           System Blueprint
         </span>
-        <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-foreground font-display leading-[1.1]">
+        <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter text-foreground font-display leading-[1.1]">
           Modular software built to resolve real operational barriers.
         </h2>
       </div>
@@ -50,7 +50,7 @@ export default function Capabilities() {
               {/* Icon header */}
               <div className="flex items-center justify-between mb-6">
                 <div className="w-14 h-14 rounded-xl bg-[#f4f7f5] border border-border flex items-center justify-center">
-                  <Icon className="w-7 h-7 text-[#4a6b5d]" />
+                  <Icon className="w-7 h-7 text-accent" />
                 </div>
                 <span className="text-xs font-mono font-bold text-foreground-muted uppercase tracking-widest">
                   {cap.spec}
@@ -58,7 +58,7 @@ export default function Capabilities() {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-medium tracking-tight text-foreground font-display leading-snug">
+              <h3 className="text-2xl font-extrabold tracking-tighter text-foreground font-display leading-snug">
                 {cap.title}
               </h3>
 
@@ -69,7 +69,7 @@ export default function Capabilities() {
 
               {/* Footer link */}
               <Link
-                href="/services"
+                href="/career"
                 className="mt-8 inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-wider text-accent hover:text-accent-hover transition-colors"
               >
                 Read Specification
