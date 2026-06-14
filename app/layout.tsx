@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: 'CivoraX — Software Studio, Dharan, Nepal',
-  description: 'We build high-performance software that works: multi-branch offline-first Retail POS, core ERPs, and bespoke web applications.',
+  description: 'We build software that works: offline-first Retail POS, ERPs, and web applications for businesses in Nepal.',
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {

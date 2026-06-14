@@ -2,21 +2,21 @@
 
 @theme {
   --color-surface: #FFFFFF;
-  --color-surface-2: #FBF5DD;
-  --color-surface-3: #F5F0DC;
+  --color-surface-2: #F0F4EC;
+  --color-surface-3: #E8EDE4;
   --color-surface-white: #ffffff;
-  --color-foreground: #0D2818;
-  --color-foreground-secondary: #3D5A47;
+  --color-foreground: #1A2E1F;
+  --color-foreground-secondary: #4A5E4F;
   --color-foreground-muted: #7A8F7F;
-  --color-accent: #306D29;
-  --color-accent-hover: #0D530E;
-  --color-accent-2: #306D29;
-  --color-accent-2-hover: #0D530E;
-  --color-border: #E7E1B1;
-  --color-border-2: #D4CEA0;
-  --color-border-3: #B8B28A;
-  --color-dark: #0D2818;
-  --color-dark-border: #1A3D28;
+  --color-accent: #6B8F71;
+  --color-accent-hover: #4A6B50;
+  --color-accent-2: #9CAF88;
+  --color-accent-2-hover: #6B8F71;
+  --color-border: #D4DEC9;
+  --color-border-2: #C2CEB6;
+  --color-border-3: #A8B89E;
+  --color-dark: #2D3B30;
+  --color-dark-border: #3D4E41;
 
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-sans), ui-sans-serif, system-ui, sans-serif;

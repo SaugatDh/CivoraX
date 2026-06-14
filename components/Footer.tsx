@@ -14,7 +14,7 @@ export default function Footer() {
             Civora<span className="text-accent-2 font-black">X</span>
           </div>
           <p className="text-xs text-foreground-secondary leading-relaxed mb-6 font-mono">
-            CivoraX Tech Pvt. Ltd. represents structured system engineering, robust local cash registers, and elegant corporate web portals made in Dharan, Nepal.
+            CivoraX Tech Pvt. Ltd. builds offline POS systems, ERPs, and web portals from Dharan, Nepal.
           </p>
           <div className="flex items-center gap-3">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
